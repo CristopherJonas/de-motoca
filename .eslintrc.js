@@ -26,7 +26,31 @@ module.exports = {
         "@typescript-eslint",
         "prettier"
     ],
+    "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [
+              ".js",
+              ".jsx",
+              ".ts",
+              ".tsx"
+            ]
+          }
+        }
+      },
     "rules": {
-        "prettier/prettier" : "error"
+        "prettier/prettier" : "error",
+        "import/prefer-default-export":"off",
+        "import/extensions":[
+            "error",
+            "ignorePackages",
+            {
+                "js":"never",
+                "mjs":"never",
+                "jsx":"never",
+                "ts":"never",
+                "tsx":"never"
+            }
+        ]
     }
 };
