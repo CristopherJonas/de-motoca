@@ -26,30 +26,38 @@ module.exports = {
         "@typescript-eslint",
         "prettier"
     ],
+    "overrides": [
+        {
+            files: ["*.ts", "*.tsx"],
+            rules: {
+                "@typescript-eslint/no-unused-vars": [2, { args: "none" }]
+            }
+        }
+    ],
     "settings": {
         "import/resolver": {
-          "node": {
-            "extensions": [
-              ".js",
-              ".jsx",
-              ".ts",
-              ".tsx"
-            ]
-          }
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
         }
-      },
+    },
     "rules": {
-        "prettier/prettier" : "error",
-        "import/prefer-default-export":"off",
-        "import/extensions":[
+        "prettier/prettier": "error",
+        "import/prefer-default-export": "off",
+        "import/extensions": [
             "error",
             "ignorePackages",
             {
-                "js":"never",
-                "mjs":"never",
-                "jsx":"never",
-                "ts":"never",
-                "tsx":"never"
+                "js": "never",
+                "mjs": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
             }
         ]
     }
