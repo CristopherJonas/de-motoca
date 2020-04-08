@@ -60,6 +60,7 @@ module.exports = {
                 "ts": "never",
                 "tsx": "never"
             }
-        ]
+        ],
+        "camelcase":"off"
     }
 };
