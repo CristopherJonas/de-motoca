@@ -15,8 +15,12 @@ router.all('/playground', Playground({ endpoint: '/graphql' }));
 router.post(
   '/graphql',
   execute({
-    schema,
-    contextValue: getContext(),
+    override: (ctx) => {
+      return {
+        schema,
+        contextValue: getContext(ctx),
+      };
+    },
   }),
 );
 
