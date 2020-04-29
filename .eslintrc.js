@@ -46,7 +46,7 @@ module.exports = {
             }
         }
     },
-    "ignorePatterns": ["packages/api/dist/"],
+    "ignorePatterns": ["packages/api/dist/", "node_modules","generated"],
     "rules": {
         "prettier/prettier": "error",
         "import/prefer-default-export": "off",
